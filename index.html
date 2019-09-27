@@ -1,0 +1,202 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="assets/semantic/semantic.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/index.css">
+      <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+      <script src="assets/semantic/semantic.min.js"></script>
+        </head>
+
+        <body>
+            <header class="ui left aligned container">
+                <div class="ui left aligned container">
+                        <div class="ui menu">
+                                <div class="header item">
+                                  Staycute/API
+                                </div>
+                                <a class="item" href="index.html">
+                                  Usage
+                                </a>
+                                <a class="item">
+                                  Credit
+                                </a>    
+                </div>
+                
+                </div>
+            </header>
+
+            <div class="ui container">
+                    <br>
+                        <h1 class="ui header">
+                                Stay API
+                                <div class="sub header">
+                                    <p>이 페이지는 StayCute Official API입니다. 유저의 제한된 권한에 따라 사용할 수 있는 API가 제한됩니다.</p>
+                                </div>
+                              </h1>
+                    <ul class="ui list">
+                            <li>글로벌 밴(Global Ban)</a></li>
+                                <ul>
+                                <li><a href="#globan-link">Base URL</a></li>
+                                <li><a href="#global-check-user">/check/user</a></li>
+                                <li><a href="#global-add-user">/add/user</a></li>
+        
+                                </ul>
+                            </li>
+
+                            </ul>
+                            <h1>
+                                    글로벌 밴(Global Ban)
+                            </h1>
+                    <section id="globan-link">
+                            <h2 class="ui header">
+                                    기본 URL
+                                    <div class="sub header">
+                                        <p>API의 기본 URL(Base URL)입니다.</p>
+        
+                                    </div>
+                                  </h2>
+                        <div class="ui fluid labeled input copytext" onclick="copy('base', '.copytext')">
+                        <input id="base" type="text" value="http://api.staycute.xyz:9666/" readonly>
+                        <div class="ui corner label">
+                            <i class="copy icon"></i>
+                        </div>
+                        </div>
+                    </section>
+                    <br>
+                    <div class="ui clearing divider"></div>
+                    <section id="global-check-user">
+                            <h2 class="ui header">
+                                    /check/user
+                                    <div class="sub header">
+                                        <p>글로벌 밴 여부를 확인합니다.</p>
+        
+                                    </div>
+                                  </h2>
+                                  <div class="ui fluid labeled input">
+                                        <div class="ui label green">
+                                          GET
+                                        </div>
+                                        <input id="base" type="text" value="http://api.staycute.xyz:9666/check/user/[userID]" readonly>
+                                      </div>
+                                          <table class="ui celled striped table">
+                                                <thead>
+                                                  <tr><th colspan="2">
+                                                    Headers
+                                                  </th>
+                                                </tr></thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="collapsing">
+                                                       token
+                                                    </td>
+                                                    <td>엑세스 토큰 or 일반 토큰</td>
+
+                                                  </tr>
+                                                  
+                                                </tbody>
+                                              </table>
+                                              <table class="ui celled striped table">
+                                                    <thead>
+                                                      <tr><th colspan="2">
+                                                            Parameter
+                                                      </th>
+                                                    </tr></thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td class="collapsing">
+                                                           userID
+                                                        </td>
+                                                        <td>디스코드 유저 아이디 (19자리)</td>
+    
+                                                      </tr>
+                                                      
+                                                    </tbody>
+                                                  </table>
+                                              
+
+                    </section>
+                    <br>
+                    <section id="global-add-user">
+                            <h2 class="ui header">
+                                    /add/user
+                                    <div class="sub header">
+                                        <p>유저를 글로벌 밴 합니다.</p>
+        
+                                    </div>
+                                  </h2>
+                                  <div class="ui fluid labeled input">
+                                        <div class="ui label green">
+                                          GET
+                                        </div>
+                                        <input id="base" type="text" value="http://api.staycute.xyz:9666/add/user/[userID]/(Reason)" readonly>
+                                      </div>
+                                          <table class="ui celled striped table">
+                                                <thead>
+                                                  <tr><th colspan="2">
+                                                    Headers
+                                                  </th>
+                                                </tr></thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="collapsing">
+                                                       token
+                                                    </td>
+                                                    <td>엑세스 토큰 or 일반 토큰</td>
+
+                                                  </tr>
+                                                  
+                                                </tbody>
+                                              </table>
+                                              <table class="ui celled striped table">
+                                                    <thead>
+                                                      <tr><th colspan="2">
+                                                            Parameter
+                                                      </th>
+                                                    </tr></thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td class="collapsing">
+                                                           userID
+                                                        </td>
+                                                        <td>디스코드 유저 아이디 (19자리)</td>
+    
+                                                      </tr>
+                                                      <tr>
+                                                            <td class="collapsing">
+                                                               Reason
+                                                            </td>
+                                                            <td>글로벌 밴 사유 (옵션)</td>
+        
+                                                          </tr>
+                                                      
+                                                    </tbody>
+                                                  </table>
+                                              
+
+                    </section>
+                </div>
+               
+        </body>
+
+
+        <script>
+                function copy(id, c) {
+              /* Get the text field */
+              var copyText = document.getElementById(id);
+              /* Select the text field */
+              copyText.select(); 
+              copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+              /* Copy the text inside the text field */
+              document.execCommand("copy");
+              $(c)
+                    .popup({
+                        title: '클립보드로 복사되었습니다!',
+                            on:'click'
+                    })
+                    .popup('show');
+              /* Alert the copied text */
+            }</script>
+
+</html>
