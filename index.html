@@ -38,6 +38,7 @@
                <li><a href="#globan-link">Base URL</a></li>
                <li><a href="#global-check-user">/check/user</a></li>
                <li><a href="#global-add-user">/add/user</a></li>
+               <li><a href="#global-delete-user">/delete/user</a></li>
             </ul>
             </li>
          </ul>
@@ -117,10 +118,10 @@
                </div>
             </h2>
             <div class="ui fluid labeled input">
-               <div class="ui label green">
-                  GET
+               <div class="ui label yellow">
+                  PUT
                </div>
-               <input id="base" type="text" value="http://api.staycute.xyz:9666/add/user/[userID]/(Reason)" readonly>
+               <input id="base" type="text" value="http://api.staycute.xyz:9666/add/user/[userID]/[Reason]" readonly>
             </div>
             <table class="ui celled striped table">
                <thead>
@@ -135,7 +136,7 @@
                      <td class="collapsing">
                         token
                      </td>
-                     <td>엑세스 토큰 or 일반 토큰</td>
+                     <td>엑세스 토큰</td>
                   </tr>
                </tbody>
             </table>
@@ -158,13 +159,84 @@
                      <td class="collapsing">
                         Reason
                      </td>
-                     <td>글로벌 밴 사유 (옵션)</td>
+                     <td>글로벌 밴 사유</td>
+                  </tr>
+               </tbody>
+            </table>
+         </section>
+         <br>
+         <section id="global-delete-user">
+            <h2 class="ui header">
+               /delete/user
+               <div class="sub header">
+                  <p>유저를 글로벌 밴에서 해제 합니다.</p>
+               </div>
+            </h2>
+            <div class="ui fluid labeled input">
+               <div class="ui label red">
+                  DELETE
+               </div>
+               <input id="base" type="text" value="http://api.staycute.xyz:9666/delete/user/[userID]" readonly>
+            </div>
+            <table class="ui celled striped table">
+               <thead>
+                  <tr>
+                     <th colspan="2">
+                        Headers
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="collapsing">
+                        token
+                     </td>
+                     <td>엑세스 토큰</td>
+                  </tr>
+               </tbody>
+            </table>
+            <table class="ui celled striped table">
+               <thead>
+                  <tr>
+                     <th colspan="2">
+                        Parameter
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="collapsing">
+                        userID
+                     </td>
+                     <td>디스코드 유저 아이디 (19자리)</td>
                   </tr>
                </tbody>
             </table>
          </section>
       </div>
+      <br>
+      <br   >
+      <div class="ui vertical footer segment">
+            <div class="ui center aligned container">
+              <div class="ui stackable grid">
+                <div class="four wide column">
+                  <h2 class="ui header">StayCute™</h2>
+                  <p>StayCute Official API <br>Stay API Document.
+                  </p>
+                </div>
+                  <div class="four wide column">
+                     <h4 class="ui header">Social</h4>
+                     <div class="ui link list">
+                     <a class="item" href="https://discord.gg/VD86nux" target="_blank"><i class="discord icon"></i>StayCute Discord</a>
+                     <a class="item" href="https://github.com/wonderlandpark/stay-api-docs" target="_blank"><i class="github icon"></i>GitHub</a>
+                     </div>
+                  </div>
+                
+            
+            </div>
+          </div>
    </body>
+   
    <script>
       function copy(id, c) {
       /* Get the text field */
@@ -184,3 +256,13 @@
       }
    </script>
 </html>
+
+<h2 class="ui header">
+      <img class="ui image" src="assets/images/logo.png">
+      <div class="ui inverted content" style="color:white">
+         StayCute™
+      </div>
+    </h2>
+    <div class="inverted sub header" style="color:white">
+       Staycute Official API
+    </div>
